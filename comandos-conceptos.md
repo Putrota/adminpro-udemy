@@ -18,3 +18,5 @@ ng g component login --spec=false -s
  2042  ng generate service --spec=false
  2043  ng generate service shared --spec=false
  2044  ng generate service sidebar --spec=false
+
+ Resumir la importación de páginas, separarlas en otro módulo
