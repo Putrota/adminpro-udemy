@@ -20,3 +20,24 @@ ng g component login --spec=false -s
  2044  ng generate service sidebar --spec=false
 
  Resumir la importación de páginas, separarlas en otro módulo
+
+Problemática
+
+01 Angular no puede manejar atributos que no conoce
+
+
+ANGULAR
+Para que angular maneje los atributos
+[style.width]="progreso + '%'" style="width: 50%"
+[attr.ariaValuenow]="progreso" aria-valuenow="50"
+
+Conecta variable con el value de un input
+name="progreso" [(ngModel)]="progreso"
+
+
+Sobre los inputs y outputs
+    [leyenda]="olakase" // manda la variable olakase
+    leyenda="olakase" // manda el string olakase
+
+Crear un output
+    necesitamos asociarlo con un emitter

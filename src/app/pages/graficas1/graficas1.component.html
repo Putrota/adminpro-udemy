@@ -1,3 +1,43 @@
-<p>
-  graficas1 works!
-</p>
+<!-- <div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <div style="display: block">
+                    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+
+                <div style="display: block">
+                    <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row">
+    <div class="col-6" *ngFor="let grafica of graficosIterables">
+        <div class="card">
+            <div class="card-body">
+
+                <app-dona [data]="grafica" [chartLabels]="grafica.labels" [chartData]="grafica.data" [chartType]="grafica.type"></app-dona>
+
+                <!-- <h3>{{ grafica.leyenda }}</h3>
+
+                <div style="display: block">
+                    <canvas baseChart [data]="grafica.data" [labels]="grafica.labels" [chartType]="grafica.type"></canvas>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+</div>

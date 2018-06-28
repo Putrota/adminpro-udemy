@@ -1,8 +1,14 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
 // Módulos
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
+
+
+// ng2-charts
+import { ChartsModule } from 'ng2-charts';
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -12,12 +18,19 @@ import { PagesComponent, } from './pages.component';
 import { PAGES_ROUTES } from './pages.routes';
 
 
+// Temporal
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+import { DonaComponent } from '../components/graficos/dona.component';
+
+
 @NgModule({
     declarations: [
         DashboardComponent,
         ProgressComponent,
         Graficas1Component,
         PagesComponent,
+        IncrementadorComponent,
+        DonaComponent
     ],
     exports: [
         DashboardComponent,
@@ -26,8 +39,11 @@ import { PAGES_ROUTES } from './pages.routes';
         PagesComponent,
     ],
     imports: [
+        BrowserModule,
         SharedModule,
-        PAGES_ROUTES
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
     ]
 })
 
