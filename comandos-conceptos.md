@@ -41,3 +41,6 @@ Sobre los inputs y outputs
 
 Crear un output
     necesitamos asociarlo con un emitter
+
+
+let selectores: any = document.getElementsByClassName('selector');
