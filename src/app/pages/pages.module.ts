@@ -17,6 +17,9 @@ import { Graficas1Component } from './graficas1/graficas1.component';
 import { PagesComponent, } from './pages.component';
 import { PAGES_ROUTES } from './pages.routes';
 
+// Pipe Module
+import { PipesModule } from '../pipes/pipes.module';
+
 
 // Temporal
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
@@ -24,6 +27,7 @@ import { DonaComponent } from '../components/graficos/dona.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -36,7 +40,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         DonaComponent,
         AccountSettingsComponent,
         PromesasComponent,
-        RxjsComponent
+        RxjsComponent,
+        ProfileComponent
     ],
     exports: [
         DashboardComponent,
@@ -49,7 +54,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        PipesModule
     ]
 })
 
